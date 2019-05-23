@@ -20,8 +20,15 @@
 		<div id="div-col-2-1">
 		<% @emails.each do |email| %>
 			<div id="div-cols">
-				
-				<%= link_to "#{email.objet}", email_path(email.id), remote: true %>
+				<div id="div-cols-1">
+					<%= link_to "#{email.objet}", email_path(email.id), remote: true %> 
+					
+				</div>
+				<div id="div-cols-2">
+					<% if email.read == false%>
+						<b>Non Lu</b>
+					<% end %>
+				</div>
 			</div> 
 		<% end %>
 		</div>

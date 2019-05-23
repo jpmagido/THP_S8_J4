@@ -5,10 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-5.times do 
-  Book.create(author: Faker::Book.author, title: Faker::Book.title)
+
+def destroy_table_instances
+	Book.destroy_all
+	Email.delete_all
 end
 
-10.times do
-	Email.create(objet: Faker::Internet.email, body: Faker::Movie.quote)
+def create_books
+	5.times do 
+  		Book.create(author: Faker::Book.author, title: Faker::Book.title)
+	end
 end
+
+def create_emails
+	
+	10.times do
+		Email.create(objet: Faker::Internet.email, body: Faker::Movie.quote, read: Faker::Boolean.boolean)
+	end
+
+end
+
+
+def perform
+	destroy_table_instances
+	create_books
+	create_emails
+end
+
+perform

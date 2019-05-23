@@ -23,7 +23,7 @@ class EmailsController < ApplicationController
 		puts "$$" * 100
 		puts params[:id]
 		puts "$$" * 100
-
+		@email_one = Email.find(params[:id])
 		@email_show_body = Email.find(params[:id]).body
 		@email_show_objet = Email.find(params[:id]).objet
 		@email_show_id = Email.find(params[:id]).id
@@ -32,9 +32,29 @@ class EmailsController < ApplicationController
 		formats.html { redirect_to root_path }
 		formats.js { }
 		end
-
-
 	end
+
+
+	def destroy
+
+		@mail = Email.find(params[:id])
+		@mail.destroy
+		redirect_to root_path
+		
+	end
+
+
+	def update
+		@mail_read = Email.find(params[:id])
+		if @mail_read.read == true
+			@mail_read.update(read: false)
+		else
+			@mail_read.update(read: true)
+		end
+		
+	end
+
+
 
 	private
 

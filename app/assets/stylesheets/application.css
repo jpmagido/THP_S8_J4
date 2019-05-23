@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+a{
+	color: black;
+}
 .div-tableau-all{
 	margin: 0 0 20px 10%;
 }
@@ -54,16 +58,20 @@
 
 }
 
-.div-cols{
+#div-cols{
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 
 	padding-bottom: 10px;
 	padding-left: 10px; 
-
-	width: 50%;
-
 }
+
+#div-cols-2{
+	
+	padding: 0 10px 0 0;
+	font-weight: bold;
+}
+
 
 #div-col-2-2{
 	border-left: solid;

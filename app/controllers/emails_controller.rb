@@ -19,17 +19,28 @@ class EmailsController < ApplicationController
 		end
 	end
 
+	def show
+		puts "$$" * 100
+		puts params[:id]
+		puts "$$" * 100
+
+		@email_show_body = Email.find(params[:id]).body
+		@email_show_objet = Email.find(params[:id]).objet
+		@email_show_id = Email.find(params[:id]).id
+
+		respond_to do |formats|
+		formats.html { redirect_to root_path }
+		formats.js { }
+		end
+
+
+	end
+
 	private
 
 	def email_params
 	  params.permit(:objet, :body)
 	end
 
-	def show
-		puts "$$" * 100
-		puts params[:id]
-		puts "$$" * 100
 
-		@email_show = Email.find(params[:id])
-	end
 end

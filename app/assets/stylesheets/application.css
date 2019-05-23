@@ -17,12 +17,6 @@
 	margin: 0 0 20px 10%;
 }
 
-#email-list{
-
-	display: flex;
-	justify-content: space-between;
-
-}
 
 .div-tableau-outside{
 	display: flex;
@@ -43,7 +37,8 @@
 }
 
 #div-tableau-inside{
-
+	display: flex;
+	flex-direction: row;
 	border-top: solid;
 	border-left: solid;
 	border-right: solid;
@@ -54,15 +49,26 @@
 	padding-left: 10px;
 }
 
-.div-col{
+#div-col-2-1{
+	width: 50%;
+
+}
+
+.div-cols{
+	display: flex;
+	flex-direction: column;
 
 	padding-bottom: 10px;
 	padding-left: 10px; 
 
 	width: 50%;
-	
 
+}
 
+#div-col-2-2{
+	border-left: solid;
+	width: 50%;
+	padding: 10px;
 }
 .div-col-2{
 	 
@@ -124,3 +130,11 @@
 	background-color: #777778; 
 	padding-left: 10px;
 }
+
+
+
+
+
+
+
+

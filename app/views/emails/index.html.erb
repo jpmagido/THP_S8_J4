@@ -17,20 +17,20 @@
 		</div>
 	</div>
 	<div id="div-tableau-inside">
-	
+		<div id="div-col-2-1">
 		<% @emails.each do |email| %>
-			<div id="email-list"> 
+			<div id="div-cols">
 				
-				<div id="div-col">
-					<%= email.objet %>
-				</div> 
-			
-				<div id="div-col-1"> 
-					<a href=<%= email_path(email.id) %> > <%= email.body  %> </a>  
-				</div>
-			</div>
+				<%= link_to "#{email.objet}", email_path(email.id), remote: true %>
+			</div> 
 		<% end %>
+		</div>
+		<div id="div-col-2-2"> 
+			
+		</div>
 	</div>
+		
+	
 	<div id="div-tableau-footer">
 
 		<div id="div-tableau-footer-1">

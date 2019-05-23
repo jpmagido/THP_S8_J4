@@ -1,0 +1,70 @@
+<h1>Emails#index</h1>
+
+
+<p>Find me in app/views/emails/index.html.erb</p>
+
+
+<h1>Emails#index</h1>
+
+
+<div class="div-tableau-all">
+	<div class="div-tableau-outside">
+		<div id="div-col-2">
+			Objet
+		</div>
+		<div id="div-col-1-1">
+			Contenu
+		</div>
+	</div>
+	<div id="div-tableau-inside">
+	
+		<% @emails.each do |email| %>
+			<div id="email-list"> 
+				
+				<div id="div-col">
+					<%= email.objet %>
+				</div> 
+			
+				<div id="div-col-1"> 
+					<a href=<%= email_path(email.id) %> > <%= email.body  %> </a>  
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div id="div-tableau-footer">
+
+		<div id="div-tableau-footer-1">
+			
+		</div>
+		<div id="div-tableau-footer-2">
+			
+		</div>
+		
+	</div>
+</div>
+
+<div class="div-form">
+<h3>Création de Mail</h3>
+	<div class="form">
+	  <%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
+	    <label for="title">Objet</label>
+	    <%= text_field_tag  :objet %>
+
+	    <label for="author">Contenu</label>
+	    <%= text_field_tag  :body %>
+
+	    <%= submit_tag 'create', :name => 'commit'%>
+	  <% end %>
+</div>
+<br>
+<%= link_to "New Email", emails_path, method: :post, class: "btn btn-primary", remote: true %>
+</div>
+
+
+
+<br>
+
+
+
+
+

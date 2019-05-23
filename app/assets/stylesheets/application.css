@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.div-tableau-all{
+	margin: 0 0 20px 10%;
+}
+
+#email-list{
+
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.div-tableau-outside{
+	display: flex;
+	justify-content: space-between;
+	
+	background-color: #6979F8;
+	
+	font-size: large;
+	font-weight: bold;
+
+	border-top: solid;
+	border-left: solid;
+	border-right: solid;
+
+	width: 80%;
+	padding-left: 10px;
+
+}
+
+#div-tableau-inside{
+
+	border-top: solid;
+	border-left: solid;
+	border-right: solid;
+
+	background-color: #D8D7DB;
+
+	width: 80%;
+	padding-left: 10px;
+}
+
+.div-col{
+
+	padding-bottom: 10px;
+	padding-left: 10px; 
+
+	width: 50%;
+	
+
+
+}
+.div-col-2{
+	 
+	padding-left: 10px; 
+	padding-bottom: 10px;
+
+	width: 50%;
+}
+
+#div-col-1{
+
+	padding-bottom: 10px;
+	padding-left: 10px; 
+
+	width: 50%;
+
+	border-left: solid;
+	
+}
+
+.div-form{
+
+	border: solid;
+	padding: 0 20px 20px 20px;
+	margin: 20px 20px 20px 10%;
+	width: 50%;
+	background-color: #D8D7DB;
+}
+
+#div-col-1-1{
+
+	padding-left: 10px; 
+	width: 50%;
+	border-left: solid;
+	padding-bottom: 10px;
+}
+
+
+#div-tableau-footer-1{
+	
+	width: 50%;
+	
+
+}
+
+#div-tableau-footer-2{
+	
+	width: 50%;
+	border-left: solid;
+	padding-left: 10px;
+
+}
+
+#div-tableau-footer{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	border: solid;
+	background-color: #777778; 
+	padding-left: 10px;
+}

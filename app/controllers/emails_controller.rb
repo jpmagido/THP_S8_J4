@@ -10,7 +10,7 @@ class EmailsController < ApplicationController
 		puts params
 		puts "$$" * 100
 		@email2 = Email.create(objet: "#{Faker::Internet.email}", body: "#{Faker::Movie.quote}", read: Faker::Boolean.boolean)
-		@email = Email.create(objet: params[:objet], body: params[:body])
+		@email = Email.create(objet: params[:objet], body: params[:body], read: Faker::Boolean.boolean)
 		
 		
 		respond_to do |format|

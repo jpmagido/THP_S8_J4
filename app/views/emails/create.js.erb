@@ -2,4 +2,8 @@ document.getElementById("div-tableau-footer-1").insertAdjacentHTML("beforeend", 
 
 document.getElementById("div-tableau-footer-2").insertAdjacentHTML("beforeend", "<%= j render 'email2', email: @email2 %>");
 
+document.getElementById("div-tableau-footer-1").insertAdjacentHTML("beforeend", "<%= j render 'email', email: @email %>");
+
+document.getElementById("div-tableau-footer-2").insertAdjacentHTML("beforeend", "<%= j render 'email2', email: @email %>");
+
 alert('Vous avez reçu un nouveau mail !');
